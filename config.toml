@@ -1,4 +1,4 @@
-baseurl = "http://toanvuong.io"
+baseurl = "http://toanvuong.io/"
 languageCode = "en-us"
 title = "toan's thoughts"
 theme = "hugo-steam-theme"
