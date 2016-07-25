@@ -42,7 +42,7 @@ The biggest annoyance I found was that my development environment wasn't on loca
 # --bind Binds to a specific IP address
 # --baseURL I assume determines the HTTP Host header that our hugo HTTP server accepts. By default this is localhost and will not work if the development environment isn't localhost, even if one sets the bind address differently
  ```
- Personally I think hugo should be changed so that `--baseURL` isn't necessary. `hugo` doesn't seem to allow a single process to host multiple sites (virtual hosts) so there's no point in reqh
+ Personally I think hugo should be changed so that `--baseURL` isn't necessary. `hugo` doesn't seem to allow a single process to host multiple sites (virtual hosts) so there's no point in requiring this parameter.
 
 ### **Steam**
 I chose [steam](http://themes.gohugo.io/theme/steam/post/creating-a-new-theme/) for its simplicity. Being new to Hugo, it took a little while to get everything running smoothly. The biggest thing here is to be sure to follow the theme's installation instructions and look at the `hugo-steam-theme/exampleSite` directory for usage examples.
