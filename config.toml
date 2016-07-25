@@ -1,0 +1,36 @@
+baseurl = "http://toanvuong.io"
+languageCode = "en-us"
+title = "toan's thoughts"
+theme = "hugo-steam-theme"
+paginate = 10
+
+[params]
+
+	title = "toan's thoughts"
+	subtitle = "random brain dump"
+	copyright = ""
+
+	# You can choose between green, orange, red and blue.
+	themeColor = "blue"
+	# Enable Google Analytics be inserting your tracking code
+	googleAnalytics = ""
+
+	# To provide some metadata for search engines and the about section in the footer
+	# feel free to add a few information about you and your website.
+	name = "Toan Vuong"
+	bio = "A software engineer with a passion to learn new things."
+	description = "Home of the other part of my brain"
+	location = "" # optional
+	github = "toad2186" # optional
+
+	# Enable a comment system
+	# You can choose between Disqus or Google Plus by setting comments
+	# to disqus or googleplus. For using Disqus you need to enter your
+	# shortname in disqusShortname at the top of the configs. 
+	#comments = "disqus"
+
+	# Customize or translate the strings
+	keepReadingStr = "Keep reading"
+	backtotopStr = "Back to top"
+	shareStr = "Share"
+	pageNotFoundTitle = "404 - Page not found"
