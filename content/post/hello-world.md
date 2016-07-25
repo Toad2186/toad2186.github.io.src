@@ -47,6 +47,8 @@ The biggest annoyance I found was that my development environment wasn't on loca
 ### **Steam**
 I chose [steam](http://themes.gohugo.io/theme/steam/post/creating-a-new-theme/) for its simplicity. Being new to Hugo, it took a little while to get everything running smoothly. The biggest thing here is to be sure to follow the theme's installation instructions and look at the `hugo-steam-theme/exampleSite` directory for usage examples.
 
+Another nice thing about steam is the ability to have custom pages with links. So this website can be used as a multi-purpose site rather than a blog-only page!
+
 
 ### **Hosting**
 I'm not a stranger to hosting services--I have two VPSes, a Digital Ocean Droplet, and I've also used S3/Cloudfront at work. What I cared most about here was simplicity in hosting. I opted to use [Github Pages](https://pages.github.com/) for this task. Let me preface by saying that this isn't necessary, and by default if you name your repo `<github_handle>.github.io` then the whole repo will be served out of the box without any issues. So by this point, http://toad2186.github.io is already accessible. What I wanted was for http://toanvuong.io to be accessible and serving the same
@@ -63,5 +65,4 @@ To get around this, I have two git repos. My main (source) repo is at `https://g
 
 My last gripe with Github hosting is the lack of https which is sensible given the constraints. Unless they do some man-in-the-middle decryption/encryption or have an option for users to upload SSL certificates for their personal domains, it's not possible for Github to provide HTTPS hosting. Furthermore, virtual hosts (which is what I assume Github uses) gets complicated with HTTPS since the HTTP Host header is no longer readable--A [TLS Server Name Indication extension](https://www.digitalocean.com/community/tutorials/how-to-set-up-multiple-ssl-certificates-on-one-ip-with-apache-on-ubuntu-12-04)is required for such a feat. So it's possible, but difficult. For now though, since there isn't any sensitive information flowing through these pages, http should be fine :).
 
-
-
+All in all, it was rather simple and saved me the need to setup nginx on one of my existing virtual servers (or worse, spin up a new VPS!). Github it is, until I find a better host!
