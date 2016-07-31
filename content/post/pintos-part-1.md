@@ -22,7 +22,7 @@ description = "First steps with pintos"
 ### **What is it**
 While studying at Berkeley, I had friends who took our OS class. There, they used [nachos](http://people.eecs.berkeley.edu/~kubitron/courses/cs162-F05/Nachos/walk/walk.html), which was an operating system designed specifically for the OS class there. Originally written in C++, it has since been ported to Java and the official documentations do a great job explaining what it is. The OS class, along with the networking class, are among the few classes which I regret not having taken at Berkeley. If I recall however, they've since upgraded to using [pintos](https://cs162.eecs.berkeley.edu/info/) which was developed at [Stanford](https://web.stanford.edu/class/cs140/projects/pintos/pintos_1.html). I've chosen pintos merely through exposure: A friend of mine recently took the class at Stanford and recommends it!
 
-I think as a developer, even if one doesn't work directly at the OS level, knowledge _of_ the OS is still absolutely essential in writing good code (In fact, I'd argue that this extends to the hardware level as well). I read (The Design of the UNIX Operating System)[https://www.amazon.com/Design-UNIX-Operating-System/dp/0132017997] and loved it! In fact, I'm thinking about re-reading it one of these days. There's a lot of insights into how UNIX was designed, and by (partial) extension, Linux. You get to learn about how the filesystem works, pipes, file descriptors, and lots more!
+I think as a developer, even if one doesn't work directly at the OS level, knowledge _of_ the OS is still absolutely essential in writing good code (In fact, I'd argue that this extends to the hardware level as well). I read [The Design of the UNIX Operating System](https://www.amazon.com/Design-UNIX-Operating-System/dp/0132017997) and loved it! In fact, I'm thinking about re-reading it one of these days. There's a lot of insights into how UNIX was designed, and by (partial) extension, Linux. You get to learn about how the filesystem works, pipes, file descriptors, and lots more!
 
 ### **pintos**
 Not wanting to pollute my local machine, I chose to go the Docker route. Pretty simple. The contents of my Dockerfile:
@@ -91,7 +91,10 @@ Type "apropos word" to search for commands related to "word".
 
 We can now quit `gdb` by typing `q` followed by `Enter`.
 
-Finally, we'll also need to ensure pintos uses qemu by default instead of bochs. Both are OS emulators but qemu is the one we've chosen to use.
+Finally, we'll also need to ensure pintos uses qemu by default instead of bochs. Both are OS emulators but qemu is the one we've chosen to use. Open up `/pintos/src/utils/pintos` and look at line 103. It should be changed to:
+```
+    $sim = "qemu" if !defined $sim;
+```
 
 ### **Running your first pintos application**
 Now that we have everything setup, we can now build the threads module. Start by going into the threads directory:
